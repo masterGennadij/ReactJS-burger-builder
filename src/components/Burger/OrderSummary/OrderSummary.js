@@ -1,5 +1,6 @@
 import React from 'react';
 import Auxiliary from '../../../hoc/Auxiliary';
+import Button from '../../UI/Button/Button';
 //import classes from './Modal.css';
 
 const orderSummary = (props) => {
@@ -18,7 +19,10 @@ const orderSummary = (props) => {
            <ul> 
                { summaryIngredients }               
            </ul>
+           <p><strong>Total price: {props.total}</strong></p> 
            <p>Continue to checkout?</p> 
+           <Button clicked={props.modalClose} buttonType="Danger">Cancel</Button>
+           <Button clicked={props.checkout} buttonType="Success">Checkout</Button>
        </Auxiliary>
     );
 }
