@@ -8,17 +8,28 @@
     padding: 10px;
     margin: 10px;
     font-weight: bold;
+    transition: opacity .3s;
 }
 
 .Button:first-of-type {
-    margin-left: 0;
-    padding-left: 0;
+    margin-left: 0;   
 }
-
+.Button:hover {
+    opacity: 0.8;
+}
+.Button:disabled {
+    color:grey!important;
+    border-color:grey!important;
+    cursor: not-allowed;
+}
 .Success {
     color: #5C9210;
+    padding: 10px;
+    border: 1px solid #5C9210;
 }
 
 .Danger {
     color: #944317;
+    padding: 10px;
+    border: 1px solid #944317;
 }
